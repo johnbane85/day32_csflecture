@@ -1,0 +1,23 @@
+<h1>List of Items</h1>
+
+<ul>
+  <li *ngFor="let itm of itemList" (click)="onItemClick(itm)">
+    {{ itm.name }}
+  </li>
+</ul>
+
+<table border="1">
+  <thead>
+    <th>Name</th>
+    <th>Id</th>
+    <th>Price</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let itm of itemList">
+      <td>{{ itm.name }}</td>
+      <td>{{ itm.id }}</td>
+      <td>{{ itm.price }}</td>
+      <button (click)="onItemClick(itm)">Add</button>
+    </tr>
+  </tbody>
+</table>
