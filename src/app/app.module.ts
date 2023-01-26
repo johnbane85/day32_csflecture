@@ -8,7 +8,13 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent, ItemListComponent, EmployeeListComponent],
-  imports: [BrowserModule, RouterModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot([
+      { path: 'itemlist', component: ItemListComponent },
+      { path: 'employeelist', component: EmployeeListComponent },
+    ]),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
